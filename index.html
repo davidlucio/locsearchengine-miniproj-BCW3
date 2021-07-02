@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library of Congress | Search</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -14,11 +14,11 @@
 
     <div>
         <div>
-            <form>
+            <form id="searchform">
                 <h2>Hello and welcome</h2>
                 <input id="searchfield" type="text" placeholder="search">
-                <select id="format" form-select aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+                <select id="formatfield" form-select aria-label="Default select example">
+                    <option selected disabled>Open this select menu</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -28,6 +28,11 @@
         
         </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/fetchapi.js"></script>
+    <script src="./assets/js/formhooks.js"></script>
     
 </body>
 </html>

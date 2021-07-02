@@ -1,11 +1,6 @@
-// Reusable Form Hook -- Just set the IDs
-var formID = "test-form",
-    searchID = "texttest",
-    formatID = "dropdowntest";
-
-let searchForm = $(`#${formID}`),
-    searchField = $(`#${searchID}`),
-    formatField = $(`#${formatID}`);
+let searchForm = $(`#searchform`),
+    searchField = $(`#searchfield`),
+    formatField = $(`#formatfield`);
 
 // FORM HOOK FOR SEARCH PARAMETERS
 searchForm.on("submit", function(event){
@@ -20,7 +15,7 @@ searchForm.on("submit", function(event){
     }
 
     // Connect to Fetch function call here
-    console.log(`Searching for ${[searchInput]} within the ${formatInput} category`);
+    getApi( formatInput, searchInput )
 
     // Clear fields:
     searchField.val("");
